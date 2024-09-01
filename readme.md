@@ -34,3 +34,7 @@ npm install nativewind@2
 npm install --save-dev --save-exact tailwindcss@3.3.2
 npx tailwindcss init
 ```
+## React Native Routing
+```shell
+npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar
+```
