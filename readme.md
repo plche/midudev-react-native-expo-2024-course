@@ -23,3 +23,8 @@ npx expo install expo-constants
 ```shell
 npx expo install react-native-safe-area-context
 ```
+## SVG in React Native
+```shell
+npx expo install react-native-svg
+```
+https://react-svgr.com/playground/
