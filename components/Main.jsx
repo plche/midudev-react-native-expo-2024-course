@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import {View, ActivityIndicator, FlatList} from 'react-native';
 import {getLatestGames} from "../lib/metacritic";
 import {useSafeAreaInsets} from "react-native-safe-area-context";
-import {GameCard} from "./GameCard";
+import {AnimatedGameCard} from "./GameCard";
 import {Logo} from "./Logo";
 
 export function Main() {
@@ -23,7 +23,13 @@ export function Main() {
       {games.length === 0 ? (
           <ActivityIndicator color={"#fff"} size={"large"} />
       ) : (
-        <FlatList data={games} keyExtractor={(game) => game.slug} renderItem={({ item }) => <GameCard game={item} />} />
+        <FlatList
+          data={games}
+          keyExtractor={(game) => game.slug}
+          renderItem={({ item, index }) => (
+            <AnimatedGameCard game={item} index={index} />
+          )}
+        />
       )}
     </View>
   );
