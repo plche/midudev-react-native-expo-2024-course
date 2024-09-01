@@ -28,3 +28,9 @@ npx expo install react-native-safe-area-context
 npx expo install react-native-svg
 ```
 https://react-svgr.com/playground/
+## Tailwind (Nativewind) in React Native
+```shell
+npm install nativewind@2
+npm install --save-dev --save-exact tailwindcss@3.3.2
+npx tailwindcss init
+```
