@@ -1,11 +1,22 @@
 import {View, Text} from "react-native";
-import {Link, useLocalSearchParams} from "expo-router";
+import {Link, Stack, useLocalSearchParams} from "expo-router";
+import {Screen} from "../components/Screen";
+import {Logo} from "../components/Logo";
 
 export default function Detail() {
   const { gameslug } = useLocalSearchParams();
 
   return (
-    <View className="flex-1 justify-center items-center">
+    <Screen>
+      <Stack.Screen
+        options={{
+          headerStyle: {backgroundColor: "#ffee00"},
+          headerTintColor: "black",
+          headerLeft: () => {},
+          headerTitle: "The Legend of Zelda: Breath of the Wild",
+          headerRight: () => {},
+        }}
+      />
       <View>
         <Text className="text-white font-bold mb-8 text-2xl">
           Detalle del juego {gameslug}
@@ -14,6 +25,6 @@ export default function Detail() {
           Volver atrás
         </Link>
       </View>
-    </View>
+    </Screen>
   );
 }
