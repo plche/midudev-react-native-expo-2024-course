@@ -13,7 +13,7 @@ export default function Layout() {
           headerTitle: "",
           headerLeft: () => <Logo style={{ width: 176, height: 40 }} />,
           headerRight: () => (
-            <Link asChild href="/about">
+            <Link asChild href="/(tabs)/about">
               <Pressable>
                 <CircleInfoIcon />
               </Pressable>
